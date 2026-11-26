@@ -5,19 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Amaliyot-1</title>
-    <link rel="stylesheet" href="/src/css/index.css">
-    <link rel="shortcut icon" href="/src/images/logo.png" type="image/x-icon">
-    <style type="text/tailwindcss">
-      /* @theme {
-       
-      } */
-    </style>
+    <link rel="stylesheet" href="/src/css/index.css" />
+    <link rel="shortcut icon" href="/src/images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/tailwindcss"></style>
   </head>
   <body>
     <header>
-        <h1 class=""></h1>
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <a href="index.html">
+            <img src="src/images/logo.png" alt="logo" class="w-10" />
+          </a>
+
+          <nav>
+            <ul class="hidden md:flex">
+              <li>
+                <a href="#" data-key="about"></a>
+              </li>
+              <li>
+                <a href="#" data-key="collections"></a>
+              </li>
+              <li>
+                <a href="#" data-key="projects"></a>
+              </li>
+              <li>
+                <a href="#" data-key="campaigns"></a>
+              </li>
+              <li>
+                <a href="#" data-key="blog"></a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <button class="md:hidden">
+              <i data-lucide="menu"></i>
+            </button>
+            <a
+              href="#"
+              class="flex items-center bg-black rounded-lg px-2 py-3 cursor-pointer"
+            >
+              <i
+                data-lucide="shopping-cart"
+                class="text-white inline-block w-8"
+              ></i>
+              <p class="font-google text-white" data-key="your_card"></p>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <main></main>
     <footer></footer>
+
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/src/js/icons.js"></script>
+    <script src="/src/js/app.js"></script>
+    <script src="/src/js/translate.js"></script>
+    <script src="/src/js/translations.js"></script>
   </body>
 </html>
