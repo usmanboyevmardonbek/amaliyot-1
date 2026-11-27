@@ -1,38 +1,18 @@
-const translations = {
-  uz: {
-    about: "haqida",
-    collections: "kolleksiyalar",
-    projects: "loyihalar",
-    campaigns: "kompaniyalar",
-    your_card: "savatingiz",
-  },
-  en: {
-    about: "about",
-    collections: "kolleksiyalar",
-    projects: "loyihalar",
-    campaigns: "kompaniyalar",
-    your_card: "your card",
-  },
-};
+import { translations } from "./translations.js";
 
-const elements = document.querySelectorAll(["data-key"]);
+const elements = document.querySelectorAll("[data-key]");
 const defaultLanguage = "uz";
 const currentLanguage = localStorage.getItem("language");
-
-const selectedLangauage = currentLanguage || defaultLanguage;
+const selectedLanguage = currentLanguage || defaultLanguage;
 
 window.addEventListener("DOMContentLoaded", () => {
   elements.forEach((element) => {
     const key = element.getAttribute("data-key");
+    const translation = translations?.[selectedLanguage] && 
+    translations?.[selectedLanguage]?.[key]
 
-    const translation =
-      translations?.[selectedLangauage] &&
-      translations?.[selectedLangauage]?.[key];
-
-    if (element) {
-      element.textContent = translation;
+    if (translation) {
+      element.textContent = translation
     }
-
-    
-  });
-});
+  })
+})
